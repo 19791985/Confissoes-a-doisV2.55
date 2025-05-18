@@ -13,7 +13,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentPhase = 0;
   let currentQuestionIndex = 0;
-  let results = [];
+  let results = [
+    {
+    question: "1-O que mais te faz sentir amada?",
+    answers: [
+      { text: "Palavras de carinho", value: "v1" },
+      { text: "Gestos inesperados", value: "v2" },
+      { text: "Tempo de qualidade juntos", value: "v3" },
+      { text: "Toques afetuososD", value: "v4" },
+      { text: "Ajuda nas tarefas do dia a dia", value: "v5" },
+    ]
+  },
+  {
+    question: "2-O que mais fortalece a tua ligação emocional com o teu parceiro?",
+    answers: [
+      { text: "Conversas profundas", value: "v1" },
+      { text: "Rituais românticos", value: "v2" },
+      { text: "Escuta ativa", value: "v3" },
+      { text: "Rir juntos", value: "v4" },
+      { text: "Momentos de silêncio partilhado", value: "v5" },
+    ]
+  },
+  {
+    question: "3-Como gostarias que o teu parceiro te acarinhasse mais?",
+    answers: [
+      { text: "Com mais palavras doces", value: "v1" },
+      { text: "Com mais mimos físicos", value: "v2" },
+      { text: "Com mais surpresas", value: "v3" },
+      { text: "Com mais atenção às tuas emoções", value: "v4" },
+      { text: "Com mais presença no quotidiano", value: "v5" },
+    ]
+  },
+  {
+    question: "4-Quando te sentes mais conectada?",
+    answers: [
+      { text: "Durante uma troca de olhares sincera", value: "v1" },
+      { text: "Num abraço apertado", value: "v2" },
+      { text: "Após uma boa conversa", value: "v3" },
+      { text: "Em momentos de silêncio cúmplice", value: "v4" },
+      { text: "Ao dormir juntinhos", value: "v5" },
+    ]
+  },
+  {
+    question: "5-Qual destas situações te deixaria mais feliz?",
+    answers: [
+      { text: "Receber uma carta de amor", value: "v1" },
+      { text: "Um jantar surpresa", value: "v2" },
+      { text: "Uma massagem sem motivo", value: "v3" },
+      { text: "Uma noite a dois longe de tudo", value: "v4" },
+      { text: "Ouvir 'amo-te' sem ser esperado", value: "v5" },
+    ]
+  },
+  {
+    question: "6. Qual a tua linguagem do amor preferida?",
+    answers: [
+    { text: "Palavras de afirmação", value: "linguagem_palavras" },
+    { text: "Toque físico", value: "linguagem_toque" },
+    { text: "Tempo de qualidade", value: "linguagem_tempo" },
+    { text: "Gestos de serviço", value: "linguagem_ajuda" },
+    { text: "Presentes simbólicos", value: "linguagem_presentes" }
+  ]
+},
+{
+  question: "7. Sentes-te confortável a expressar emoções?",
+  answers: [
+    { text: "Sim, totalmente", value: "aberta" },
+    { text: "Às vezes", value: "moderada" },
+    { text: "Só com quem confio", value: "reservada" },
+    { text: "Prefiro guardar para mim", value: "fechada" },
+    { text: "Depende do dia", value: "variável" }
+  ]
+},
+{
+  question: "8. Como gostas de ser surpreendida?",
+  answers: [
+    { text: "Com palavras românticas", value: "surpresa_palavras" },
+    { text: "Com um jantar especial", value: "surpresa_jantar" },
+    { text: "Com um beijo inesperado", value: "surpresa_beijo" },
+    { text: "Com uma escapadinha", value: "surpresa_viagem" },
+    { text: "Com um presente simbólico", value: "surpresa_presente" }
+  ]
+},
+{
+  question: "9. Qual destas situações te traz mais proximidade?",
+  answers: [
+    { text: "Conversar sobre sentimentos", value: "proximidade_conversa" },
+    { text: "Partilhar silêncios", value: "proximidade_silencio" },
+    { text: "Rir juntos", value: "proximidade_riso" },
+    { text: "Abraçar por minutos", value: "proximidade_abraco" },
+    { text: "Cuidar um do outro", value: "proximidade_cuidado" }
+  ]
+},
+{
+  question: "10. Quando te sentes mais conectada com o teu parceiro?",
+  answers: [
+    { text: "Durante conversas profundas", value: "conexao_conversa" },
+    { text: "Quando ele me escuta", value: "conexao_escuta" },
+    { text: "Quando me toca com ternura", value: "conexao_toque" },
+    { text: "Quando rimos juntos", value: "conexao_riso" },
+    { text: "Quando me respeita nas decisões", value: "conexao_respeito" }
+  ]
+},
+  ];
 
   const phases = [
     { title: "Fase 1: Conexão Emocional", description: "Explora o que une os nossos corações e mentes. Nesta fase, exploramos as emoções, a ternura e a ligação afetiva como casal. As perguntas são construídas para fortalecer o diálogo íntimo, a empatia e a valorização do “nós”. Cada resposta representa uma nuance emocional diferente." },
