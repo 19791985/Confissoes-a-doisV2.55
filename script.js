@@ -13,7 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentPhase = 0;
   let currentQuestionIndex = 0;
-  let results = [
+  let results = [];
+
+  const phases = [
+    { title: "Fase 1: Conexão Emocional", description: "Explora o que une os nossos corações e mentes. Nesta fase, exploramos as emoções, a ternura e a ligação afetiva como casal. As perguntas são construídas para fortalecer o diálogo íntimo, a empatia e a valorização do “nós”. Cada resposta representa uma nuance emocional diferente." },
+    { title: "Fase 2: Intimidade e Confiança", description: "Descobre como confiam, tocam e se entregam." },
+    { title: "Fase 3: Desejo e Curiosidade", description: "Aprofunda a curiosidade e a vontade de mais." },
+    { title: "Fase 4: Fantasias e Ousadia", description: "Liberta os desejos mais intensos e secretos." },
+    { title: "Fase 5: Complicidade Total", description: "Sela o amor com visão de futuro e entrega." }
+  ];
+
+  const questions = [
     {
     question: "1-O que mais te faz sentir amada?",
     answers: [
@@ -114,17 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { text: "Quando me respeita nas decisões", value: "conexao_respeito" }
   ]
 },
-  ];
-
-  const phases = [
-    { title: "Fase 1: Conexão Emocional", description: "Explora o que une os nossos corações e mentes. Nesta fase, exploramos as emoções, a ternura e a ligação afetiva como casal. As perguntas são construídas para fortalecer o diálogo íntimo, a empatia e a valorização do “nós”. Cada resposta representa uma nuance emocional diferente." },
-    { title: "Fase 2: Intimidade e Confiança", description: "Descobre como confiam, tocam e se entregam." },
-    { title: "Fase 3: Desejo e Curiosidade", description: "Aprofunda a curiosidade e a vontade de mais." },
-    { title: "Fase 4: Fantasias e Ousadia", description: "Liberta os desejos mais intensos e secretos." },
-    { title: "Fase 5: Complicidade Total", description: "Sela o amor com visão de futuro e entrega." }
-  ];
-
-  const questions = []; // <-- Deves colar aqui as tuas perguntas
+  ]; // <-- Deves colar aqui as tuas perguntas
 
   btnToIntro.addEventListener("click", () => {
     slideTitle.classList.remove("active");
